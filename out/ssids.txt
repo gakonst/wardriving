@@ -1,0 +1,28 @@
+SSID: dlink | Last seen: 30/07/2017 20:58:36
+	MAC Address: mixed
+	Security: WPA/WPA2 PSK (TKIP, CCMP)
+
+SSID: COSMOTE-4DF32C | Last seen: 30/07/2017 20:58:36
+	MAC Address: mixed
+	Security: WPA/WPA2 PSK (TKIP, CCMP)
+
+SSID: hol - NetFasteR WLAN 3 | Last seen: 30/07/2017 20:58:36
+	MAC Address: mixed
+	Security: WPA/WPA2 PSK (TKIP, CCMP)
+
+SSID: MALAKAk | Last seen: 30/07/2017 20:54:22
+	MAC Address: mixed
+	Security: WPA/WPA2 PSK (TKIP, CCMP)
+
+SSID: HAHAHA | Last seen: 30/07/2017 20:54:49
+	MAC Address: mixed
+	Security: WPA/WPA2 PSK (TKIP, CCMP)
+
+SSID: LOL | Last seen: 30/07/2017 20:58:36
+	MAC Address: mixed
+	Security: WPA/WPA2 PSK (TKIP, CCMP)
+
+SSID: hol - NetFasteR WLAN 2 | Last seen: 30/07/2017 20:55:12
+	MAC Address: mixed
+	Security: WPA/WPA2 PSK (TKIP, CCMP)
+
