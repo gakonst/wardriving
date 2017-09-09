@@ -1,4 +1,4 @@
-#iwinfo wlan0 scan > /tmp/wifiscan #save scan results to a temp file
+iwinfo wlan0 scan > /tmp/wifiscan #save scan results to a temp file
 if [ -f /tmp/ssids ]; then
     rm /tmp/ssids
 fi
@@ -35,4 +35,4 @@ done
 rm /tmp/onecell
 awk '{printf("%s\n", $0)}' /tmp/ssids > /tmp/sec_ssids #add numbers at beginning of line
 grep ESSID /tmp/wifiscan | awk '{ sub(/^[ \t]+/, ""); print }' | awk '{printf("%5d : %s\n", NR,$0)}' | awk '{gsub("ESSID:", "");print}' > /tmp/ssids #generate file with only numbers and names
-#cat sec_ssids #show ssids list
+cat sec_ssids #show ssids list
