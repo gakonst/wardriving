@@ -1,4 +1,6 @@
-#iwinfo wlan0 scan > /tmp/wifiscan #save scan results to a temp file
+# Comment out the following line when testing. Place the wifiscan file to /tmp
+iwinfo wlan0 scan > /tmp/wifiscan #save scan results to a temp file
+
 if [ -f /tmp/ssids ]; then
     rm /tmp/ssids
 fi

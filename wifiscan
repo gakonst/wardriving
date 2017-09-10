@@ -1,0 +1,18 @@
+Cell 01 - Address: C8:D3:A3:0E:49:8A
+          ESSID: "dlink"
+          Mode: Master  Channel: 1
+          Signal: -92 dBm  Quality: 18/70
+          Encryption: mixed WPA/WPA2 PSK (TKIP, CCMP)
+
+Cell 02 - Address: C4:A3:66:4D:F3:2C
+          ESSID: "COSMOTE-4DF32C"
+          Mode: Master  Channel: 1
+          Signal: -76 dBm  Quality: 34/70
+          Encryption: mixed WPA/WPA2 PSK (TKIP, CCMP)
+
+Cell 03 - Address: 00:05:59:56:93:19
+          ESSID: "hol - NetFasteR WLAN 3"
+          Mode: Master  Channel: 6
+          Signal: -90 dBm  Quality: 20/70
+          Encryption: mixed WPA/WPA2 PSK (TKIP, CCMP)
+
