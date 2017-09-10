@@ -1,4 +1,4 @@
-iwinfo wlan0 scan > /tmp/wifiscan #save scan results to a temp file
+#iwinfo wlan0 scan > /tmp/wifiscan #save scan results to a temp file
 if [ -f /tmp/ssids ]; then
     rm /tmp/ssids
 fi
@@ -25,7 +25,7 @@ while [ "$i" -le "$n_results" ]; do
     oneencryption=$(grep " Encryption:" /tmp/onecell | grep -oP '(?<=Encryption: ).*' )
 
     onessid=$(grep "ESSID:" /tmp/onecell | awk '{ sub(/^[ \t]+/, ""); print }' | awk '{gsub("ESSID:", "");print}')
-    if [ -n "$oneaddress" ]; then
+    if [ -n "$mac_address" ]; then
         echo "$onessid  $mac_address $oneencryption $onepower" >> /tmp/ssids
     else
         echo "$onessid  $oneencryption $onepower" >> /tmp/ssids

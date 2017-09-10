@@ -162,7 +162,7 @@ void queueAdd (queue *q, int in)
   printf("[+] Wifi Scan #%d | Calling searchWifi.sh...\n", in); 
   /* TODO EXECUTE SCRIPT */ 
   system(SCRIPT_PATH);
-  sleep(1); // TODO Remove sleep add searchWifi iwconfig ktl 
+  //sleep(1); // TODO Remove sleep add searchWifi iwconfig ktl 
   if (q->tail == QUEUESIZE)
     q->tail = 0; //
   if (q->tail == q->head)
