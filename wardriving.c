@@ -160,9 +160,7 @@ void queueAdd (queue *q, int in)
   q->buf[q->tail] = in;
   q->tail++;
   printf("[+] Wifi Scan #%d | Calling searchWifi.sh...\n", in); 
-  /* TODO EXECUTE SCRIPT */ 
   system(SCRIPT_PATH);
-  //sleep(1); // TODO Remove sleep add searchWifi iwconfig ktl 
   if (q->tail == QUEUESIZE)
     q->tail = 0; //
   if (q->tail == q->head)
@@ -261,11 +259,13 @@ void writeSSIDs(queue *q){
       struct tm *t = localtime(&now); 
       strftime(text, sizeof(text)-1, "%d/%m/%Y %H:%M:%S", t); // 
 
+      printf("[!] New SSID: %s\n", name);
+
       fprintf(q->ssids, "SSID: %s | Last seen: %s\n", name, text); 
       fprintf(q->ssids, "\tMAC Address: %s\n",  mac_address);
       fprintf(q->ssids, "\tSecurity: %s\n\n",  security); 
     }else{
-      printf("[!] SSID exists, timestamp updated!\n");
+      printf("[!] SSID %s exists, timestamp updated!\n", name);
     }
   }
   fclose(q->ssids);

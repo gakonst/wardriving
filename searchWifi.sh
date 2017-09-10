@@ -21,12 +21,13 @@ while [ "$i" -le "$n_results" ]; do
     ##################################################
     ## Uncomment following line to show mac address ##
 
-    mac_address=$(grep " Address:" /tmp/onecell | awk '{print $5}')
-    oneencryption=$(grep " Encryption:" /tmp/onecell | grep -oP '(?<=Encryption: ).*' )
+    oneencryption=$(grep " Encryption:" /tmp/onecell | awk '{s= ""; for (i=2; i<=10;i++) s= s $i " "; print s}')
+    #echo $oneencryption
+    oneaddress=$(grep " Address:" /tmp/onecell | awk '{print $5}')
 
     onessid=$(grep "ESSID:" /tmp/onecell | awk '{ sub(/^[ \t]+/, ""); print }' | awk '{gsub("ESSID:", "");print}')
-    if [ -n "$mac_address" ]; then
-        echo "$onessid  $mac_address $oneencryption $onepower" >> /tmp/ssids
+    if [ -n "$oneaddress" ]; then
+        echo "$onessid  $oneaddress $oneencryption $onepower" >> /tmp/ssids
     else
         echo "$onessid  $oneencryption $onepower" >> /tmp/ssids
     fi
@@ -35,4 +36,4 @@ done
 rm /tmp/onecell
 awk '{printf("%s\n", $0)}' /tmp/ssids > /tmp/sec_ssids #add numbers at beginning of line
 grep ESSID /tmp/wifiscan | awk '{ sub(/^[ \t]+/, ""); print }' | awk '{printf("%5d : %s\n", NR,$0)}' | awk '{gsub("ESSID:", "");print}' > /tmp/ssids #generate file with only numbers and names
-cat sec_ssids #show ssids list
+#cat /tmp/sec_ssids #show ssids list
